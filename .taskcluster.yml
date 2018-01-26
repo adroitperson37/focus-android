@@ -67,6 +67,9 @@ tasks:
           - push
         branches:
           - master
+    scopes:
+      - "secrets:get:project/focus/tokens"
+      - "secrets:get:project/focus/firebase"       
     payload:
       maxRunTime: 3600
       deadline: "{{ '2 hours' | $fromNow }}"
@@ -107,6 +110,7 @@ tasks:
           - release
     scopes:
       - "secrets:get:project/focus/tokens"
+      - "secrets:get:project/focus/firebase"
     payload:
       maxRunTime: 3600
       deadline: "{{ '2 hours' | $fromNow }}"
