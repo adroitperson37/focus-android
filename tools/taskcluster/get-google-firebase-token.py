@@ -17,6 +17,6 @@ data = secrets.get('project/focus/firebase')
 
 token_file_path = os.path.join(os.path.dirname(__file__), '../../.firebase_token.json')
 with open(token_file_path, 'w') as token_file:
-    token_file.write(data['secret'])
+    token_file.write(data['secret']['firebaseToken'])
 
 print("Imported google firebase token from secrets service")
